@@ -23,6 +23,14 @@ request.onerror = function(event) {
     console.log(event.target.errorCode);
 };
 
+function saveRecord(record) {
+    const transaction = db.transaction(["new_budget"], "readwrite");
+
+    const budgetObjectStore = transaction.objectStore("new_budget");
+
+    budgetObjectStore.add(record);
+}
+
 function uploadBudget() {
     // open a transaction in the db
     const transaction = db.transaction(["new_budget"], "readwrite");
@@ -35,7 +43,7 @@ function uploadBudget() {
     getAll.onsuccess = function() {
         // if data in indexedDB store, send to api server
         if (getAll.result.length > 0) {
-            fetch("/api", {
+            fetch("/api/transaction", {
                 method: "POST",
                 body: JSON.stringify(getAll.result),
                 headers: {
