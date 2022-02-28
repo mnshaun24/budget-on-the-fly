@@ -6,7 +6,7 @@ For BotFly, I updated an existing app to build in offline functionality. Indexed
 Since this is a PWA, a manifest.json file is included to ensure that users downloading the app receive the appropriate sized version.
 
 ## Purpose
-To practice creating a back-end with a NoSQL database. To practice offline functionality to improve user experience.
+To practice creating a back-end with a NoSQL database. To practice offline functionality to improve user experience. To update an app to a PWA.
 
 ## Built With
 * Node
