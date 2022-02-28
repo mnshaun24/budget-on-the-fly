@@ -1,7 +1,9 @@
 ## Shaun's Budget-on-the-Fly (BotFly) App
 
 ## About
-For BotFly, I created a back-end to attach to an existing front-end. I created models, subschema and subdocuments with Mongoose. I used virtuals to extend the models' functionality. And I incorporated IndexedDB to add offline functionality. The app is deployed on Heroku using MongoDB Atlas to host the database remotely.
+For BotFly, I updated an existing app to build in offline functionality. IndexedDB helped add the offline functionality along with the implementation of service workers. The app is deployed on Heroku using MongoDB Atlas to host the database remotely.
+
+Since this is a PWA, a manifest.json file is included to ensure that users downloading the app receive the appropriate sized version.
 
 ## Purpose
 To practice creating a back-end with a NoSQL database. To practice offline functionality to improve user experience.
